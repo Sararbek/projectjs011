@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/img/logoIcon/001.jpg">
+    <link rel="stylesheet" href="./CSS/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Amazon</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar__top">
+            <div class="navbar__top__mainBtns">
+                <a class="logo">
+                    <img src="./Assets/img/navbar/001.png" alt="amazonlogo">
+                </a>
+                <a onclick="openPopUp()" class="location">
+                        <div class="location__icon">
+                            <img src="./Assets/img/navbar/002.png" alt="">
+                        </div>
+                        <div class="location__text">
+                            <p>Deliver to</p>
+                            <p>Uzbekistan</p>
+                        </div>
+                </a>
+            </div>
+            <div class="navbar__top__search">
+                <button class="search__optionsBtn">
+                    <p>All</p>
+                    <span><img src="./Assets/img/navbar/007.png"></span>
+                </button>
+                <div class="search__bar">
+                    <input type="text" placeholder="Search Amazon">
+                </div>
+                <button class="search__clickBtn">
+                    <span>
+                        <img src="./Assets/img/navbar/003.png" >
+                    </span>
+                </button>
+            </div>
+            <div class="navbar__top__mainLinks">
+                <div class="lang">
+                    <div class="lang__flag">
+                        <img src="./Assets/img/navbar/004.jpg" alt="flag">
+                    </div>
+                    <div class="lang__info">
+                        <p>EN</p>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <a class="account">
+                    <div class="account__info">
+                        <p>Hello, sign in</p>
+                    <p>Account & Lists</p>
+                    </div>
+                    <div class="drop">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </a>
+                <a class="bought">
+                    <p>Returns</p>
+                    <p>& Orders</p>
+                </a>
+                <div class="cart">
+                    <div class="cart__count">
+                        <span><img src="./Assets/img/navbar/005.png" alt="shopping cart"></span>
+                    </div>
+                    <div class="cart__text">
+                        <p>Cart</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar__main">
+            <ul class="navlinks">
+                <li><button onclick="openSidebar()"><i class="fa-solid fa-bars"></i> All</button></li>
+                <li><a href="#">Today's deals</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Registry</a></li>
+                <li><a href="#">Gift Cards</a></li>
+                <li><a href="#">Sell</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main -->
+     <main>
+        <div id="popupModal" class="popupModal">
+            <div class="box">
+                <div class="heading">
+                    <h3>Choose your location</h3>
+                    <button onclick="closePopu()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="body">
+                    <p>Delivery options and delivery speeds may vary for different locations</p>
+                    <button class="popupBtn">Sign in to see your address</button>
+                    <div class="liq">
+                        <span></span>
+                        <p>or enter a US zip code</p>
+                        <span></span>
+                    </div>
+                    <form>
+                        <input type="text">
+                        <button>Apply</button>
+                    </form>
+                    <div class="liq">
+                        <span></span>
+                        <p>or ship outside the US</p>
+                        <span></span>
+                    </div>
+                    <select name="" id="Uzbekistan"><Option>
+                        Uzbekistan
+                    </Option></select>
+                </div>
+                <div class="footer">
+                    <button class="done">Done</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar__heading">
+                <div class="sidebar__heading__text">
+                    <a href="#">
+                        <span>
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <p>
+                            Hello, sign in
+                        </p>
+                    </a>
+                </div>
+                <div class="sidebar__heading__closeBtn">
+                    <button onclick="closeSidebar()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+            <div class="sidebar__body">
+                <ul class="sidebar__body__links">
+                    <li class="links__heading"><p>Digital Content & Devices</p></li>
+                    <li><a href="#"><span>Amazon Music</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Kindle E-readers & Books</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Amazon Appstore</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                </ul>
+                <hr>
+                <ul class="sidebar__body__links">
+                    <li class="links__heading"><p>Shop by Department</p></li>
+                    <li><a href="#"><span>Electronics</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Computers</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Smart Home</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Arts & Crafts</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li class="seeall"><a href="#"><span>See All</span> <i class="fa-solid fa-angle-down"></i></a></li>
+                </ul>
+                <hr>
+                <ul class="sidebar__body__links">
+                    <li class="links__heading"><p>Programs & Features</p></li>
+                    <li><a href="#"><span>Gift Cards</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Shop by interest</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>Amazon Live</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li><a href="#"><span>International Shopping</span> <i class="fa-solid fa-angle-right"></i></a></li>
+                    <li class="seeall"><a href="#"><span>See All</span> <i class="fa-solid fa-angle-down"></i></a></li>
+                </ul>
+                <hr>
+                <ul class="sidebar__body__lastLinks">
+                    <li class="links__heading"><p>Help & Settings</p></li>
+                    <li><a href="#"><span>Your account</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-globe"></i><span>English</span></a></li>
+                    <li><a href="#"><span><img src="./Assets/img/navbar/004.jpg" alt=""></span><span>Amazon Live</span></a></li>
+                    <li><a href="#"><span>Customer Service</span></a></li>
+                    <li><a href="#"><span>Sign in</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="hero__fixedimage">
+                    <img src="./Assets/img/wrapper/001.jpg">
+                </div>
+                <div class="hero">
+                    <div class="scrollbar">
+                        <button><i class="fa-solid fa-chevron-left"></i></button>
+                        <button><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="hero__cards">
+                        <div class="card">
+                            <div class="card__heading">
+                                <h3>Gaming accessories</h3>
+                            </div>
+                            <div class="card__imgText">
+                                <div class="card__img">
+                                    <img src="./Assets/img/firstCard/001.jpg" alt="">
+                                    <p>Headsets</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/firstCard/002.jpg" alt="">
+                                    <p>Keyboards</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/firstCard/003.jpg" alt="">
+                                    <p>Computer mice</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/firstCard/004.jpg" alt="">
+                                    <p>Chairs</p>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">See more</a>
+                            </div>
+                        </div>
+                        <div class="cardOne card">
+                            <div class="card__heading">
+                                <h3>Top categories in Kitchen appliances</h3>
+                            </div>
+                            <div class="card__imgTextDifferOne">
+                                <div class="card__img">
+                                    <img src="./Assets/img/secondCard/001.jpg" alt="">
+                                    <p>Cooker</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/secondCard/002.jpg" alt="">
+                                    <p>Coffee</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/secondCard/003.jpg" alt="">
+                                    <p>Pots and pans</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/secondCard/004.jpg" alt="">
+                                    <p>Kettles</p>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Explore all products in Kitchen</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__heading">
+                                <h3>Shop for your home essentials</h3>
+                            </div>
+                            <div class="card__imgText">
+                                <div class="card__img">
+                                    <img src="./Assets/img/thridCard/001.jpg" alt="">
+                                    <p>Cleaning tools</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/thridCard/002.jpg" alt="">
+                                    <p>Home storage</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/thridCard/003.jpg" alt="">
+                                    <p>Home Decor</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/thridCard/004.jpg" alt="">
+                                    <p>Bedding</p>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Discover more in Home</a>
+                            </div>
+                        </div>
+                        <div class="cardTwo card">
+                            <div class="card__heading">
+                                <h3>Delightful deals for everyone</h3>
+                            </div>
+                            <div class="card__imgTextDifferOne">
+                                <div class="card__img">
+                                    <img src="./Assets/img/fourthCard/001.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Show Now</a>
+                            </div>
+                        </div>
+                        <div class="cardTwo card">
+                            <div class="card__heading">
+                                <h3>Deals in PCs</h3>
+                            </div>
+                            <div class="card__imgTextDifferOne">
+                                <div class="card__img">
+                                    <img src="./Assets/img/fifthCard/001.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Show Now</a>
+                            </div>
+                        </div>
+                        <div class="cardTwo card">
+                            <div class="card__heading">
+                                <h3>Small gifts under $20</h3>
+                            </div>
+                            <div class="card__imgTextDifferOne">
+                                <div class="card__img">
+                                    <img src="./Assets/img/eightCard/Fuji_Desktop_Single_image_EBF_1x_v2._SY304_CB573698005_.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Show Now</a>
+                            </div>
+                        </div>
+                        <div class="cardTwo card">
+                            <div class="card__heading">
+                                <h3>Get your game on</h3>
+                            </div>
+                            <div class="card__imgTextDifferOne">
+                                <div class="card__img">
+                                    <img src="./Assets/img/seventhCard/001.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">Show Gaming</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__heading">
+                                <h3>Shop deals in Fashion</h3>
+                            </div>
+                            <div class="card__imgText">
+                                <div class="card__img">
+                                    <img src="./Assets/img/sixthCard/001.jpg" alt="">
+                                    <p>Jeans under $50</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/sixthCard/002.jpg" alt="">
+                                    <p>Tops under $25</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/sixthCard/003.jpg" alt="">
+                                    <p>Dresses under $30</p>
+                                </div>
+                                <div class="card__img">
+                                    <img src="./Assets/img/sixthCard/004.jpg" alt="">
+                                    <p>Shoes under $50</p>
+                                </div>
+                            </div>
+                            <div class="card__footer">
+                                <a href="#">See all deals</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </main>
+
+     <script src="./JS/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+main{
+    background-color: #e3e6e6;
+    min-height: 170vh;
+    .wrapper{
+        position: relative;
+        .hero__fixedimage{
+           z-index: 0;
+        }
+        .hero{
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 0;
+            left: 0;
+            .scrollbar{
+                width: 100%;
+                z-index: 1;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                button{
+                    height: 250px;
+                    background-color: transparent;
+                    padding: 0 25px;
+                    color: #eee;
+                    &:active{
+                        border: 3px solid #ccc;
+                    }
+                    i{
+                        font-size: 40px;
+                    }
+                }
+            }
+            .hero__cards{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, auto);
+                gap: 20px;
+                padding: 0 20px;
+                .card{
+                    padding: 20px;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                    &__heading{
+                        margin-bottom: 12px;
+                        h3{
+                            font-size: $font-size-xl;
+                            color: #0f1111;
+                        }
+                    }
+                    &__imgText{
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-rows: repeat(2, 140px);
+                        margin-bottom: 25px;
+                    }
+                    &__img{
+                        p{
+                            font-size: $font-size-xs;
+                        }
+                    }
+                    &__footer{
+                        a{
+                            font-size: $font-size-xs;
+                            color: dodgerblue;
+                        }
+                    }
+                }
+                .cardTwo.card{
+                    .card__imgTextDifferOne{
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-template-rows: repeat(1, 320px);
+                    }
+                }
+                .cardOne.card{
+                    .card__imgTextDifferOne{
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-template-rows: repeat(2, 140px);
+                    }
+                    .card__img:nth-child(1){
+                        grid-column: 1/4;
+                    }
+                }
+            }
+        }
+    }
+}
